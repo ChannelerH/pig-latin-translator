@@ -10,19 +10,8 @@ export default defineConfig({
   server: {
     headers: {
       'Access-Control-Allow-Origin': '*',
-      'X-Frame-Options': 'ALLOWALL',
-      'Content-Security-Policy': "frame-ancestors 'self' *"
-    }
-  },
-  build: {
-    target: 'esnext',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['lucide-react']
-        }
-      }
+      'X-Frame-Options': 'ALLOW-FROM https://piglatintranslator.pro',
+      'Content-Security-Policy': "frame-ancestors 'self' https://piglatintranslator.pro"
     }
   }
 });

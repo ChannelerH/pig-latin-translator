@@ -2,8 +2,9 @@ import React from 'react';
 import { Code } from 'lucide-react';
 
 export default function EmbedInstructions() {
+  const embedUrl = 'https://piglatintranslator.pro/embed';
   const iframeCode = `<iframe 
-  src="https://piglatintranslator.pro/embed"
+  src="${embedUrl}"
   width="100%"
   height="400"
   frameborder="0"
@@ -44,7 +45,7 @@ export default function EmbedInstructions() {
               <h2 className="text-xl font-semibold text-gray-800 mb-4">Preview</h2>
               <div className="border border-purple-200 rounded-xl overflow-hidden">
                 <iframe
-                  src="https://piglatintranslator.pro/embed"
+                  src={embedUrl}
                   width="100%"
                   height="400"
                   frameBorder="0"
