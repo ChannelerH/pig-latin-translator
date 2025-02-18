@@ -1,3 +1,6 @@
+# online trial
+https://piglatintranslator.pro/
+
 # Pig Latin Translator
 
 A modern, embeddable Pig Latin translation tool built with React and TypeScript. This application provides a sleek interface for translating between English and Pig Latin, with support for embedding the translator in other websites.
@@ -24,7 +27,7 @@ A modern, embeddable Pig Latin translation tool built with React and TypeScript.
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/ChannelerH/pig-latin-translator.git
 cd pig-latin-translator
 ```
 
@@ -58,7 +61,7 @@ Basic embedding example:
 
 ```html
 <iframe 
-  src="https://your-deployed-url/embed"
+  src="https://piglatintranslator.pro/embed"
   width="100%"
   height="400"
   frameborder="0"
@@ -101,9 +104,3 @@ src/
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Built with [Vite](https://vitejs.dev/)
-- Icons by [Lucide](https://lucide.dev/)
-- Styling with [Tailwind CSS](https://tailwindcss.com/)

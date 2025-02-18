@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowDownUp, Github, Sparkles, RotateCcw, Copy, BookOpen, MessageSquare, HelpCircle, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -50,6 +50,18 @@ function App() {
   const [outputText, setOutputText] = useState('');
   const [mode, setMode] = useState<'toPigLatin' | 'fromPigLatin'>('toPigLatin');
   const [copied, setCopied] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleTranslate = () => {
     if (mode === 'toPigLatin') {
@@ -82,10 +94,10 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100">
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
             Pig Latin Translator
           </h1>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Welcome to our state-of-the-art Pig Latin Translator! Experience the magic of transforming everyday English into the playful realm of Pig Latin, or effortlessly convert Pig Latin back to English with our advanced Pig Latin Translator tool.
           </p>
           <Link
@@ -124,13 +136,27 @@ function App() {
               </div>
 
               <div className="flex justify-center gap-4">
-                <button
-                  onClick={handleTranslate}
-                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 flex items-center gap-2 font-medium shadow-md hover:shadow-lg"
-                >
-                  <Sparkles size={20} />
-                  Translate
-                </button>
+                {isMobile ? (
+                  <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-sm border-t border-purple-100">
+                    <button
+                      onClick={handleTranslate}
+                      className="w-full px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 flex items-center gap-2 font-medium shadow-md hover:shadow-lg"
+                    >
+                      <Sparkles size={20} />
+                      Translate
+                    </button>
+                  </div>
+                ) : (
+                  <>
+                    <button
+                      onClick={handleTranslate}
+                      className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 flex items-center gap-2 font-medium shadow-md hover:shadow-lg"
+                    >
+                      <Sparkles size={20} />
+                      Translate
+                    </button>
+                  </>
+                )}
                 <button
                   onClick={toggleMode}
                   className="px-6 py-3 border border-purple-200 rounded-xl hover:bg-purple-50 transition-all duration-200 flex items-center gap-2 text-gray-700"
