@@ -9,7 +9,7 @@
           },
           {
             "key": "Content-Security-Policy",
-            "value": "frame-ancestors 'self' https://piglatintranslator.pro; upgrade-insecure-requests"
+            "value": "frame-ancestors 'self' https://piglatintranslator.pro"
           },
           {
             "key": "X-Frame-Options",

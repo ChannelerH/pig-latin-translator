@@ -66,15 +66,10 @@ function App() {
   useEffect(() => {
     // 动态添加广告脚本
     const script = document.createElement('script');
-    script.src = 'http://pl25904572.effectiveratecpm.com/f3ace42f827e8f1cd847f080aabdff1d/invoke.js';
+    script.src = '//pl25904572.effectiveratecpm.com/f3ace42f827e8f1cd847f080aabdff1d/invoke.js';
     script.async = true;
     script.setAttribute('data-cfasync', 'false');
     document.body.appendChild(script);
-
-    return () => {
-      // 清理函数，组件卸载时移除脚本
-      document.body.removeChild(script);
-    };
   }, []);
 
   const handleTranslate = () => {
