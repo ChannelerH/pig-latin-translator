@@ -66,24 +66,14 @@ function App() {
   useEffect(() => {
     // 动态添加广告脚本
     const script = document.createElement('script');
-    script.src = 'https://pl25904572.effectiveratecpm.com/f3ace42f827e8f1cd847f080aabdff1d/invoke.js';
+    script.src = 'http://pl25904572.effectiveratecpm.com/f3ace42f827e8f1cd847f080aabdff1d/invoke.js';
     script.async = true;
     script.setAttribute('data-cfasync', 'false');
-    script.crossOrigin = 'anonymous';
-    
-    // 添加错误处理
-    script.onerror = (error) => {
-      console.error('Ad script failed to load:', error);
-    };
-
-    document.head.appendChild(script);
+    document.body.appendChild(script);
 
     return () => {
-      try {
-        document.head.removeChild(script);
-      } catch (e) {
-        console.error('Error removing ad script:', e);
-      }
+      // 清理函数，组件卸载时移除脚本
+      document.body.removeChild(script);
     };
   }, []);
 
@@ -335,11 +325,8 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center w-full">
-          <div 
-            id="container-f3ace42f827e8f1cd847f080aabdff1d" 
-            className="w-full max-w-4xl min-h-[100px]"
-          ></div>
+        <div className="mt-12 flex justify-center">
+          <div id="container-f3ace42f827e8f1cd847f080aabdff1d"></div>
         </div>
 
         <footer className="mt-12 text-center text-gray-600">
