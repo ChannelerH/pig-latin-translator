@@ -10,8 +10,8 @@ export default defineConfig({
   server: {
     headers: {
       'Access-Control-Allow-Origin': '*',
-      'X-Frame-Options': 'ALLOW-FROM https://piglatintranslator.pro',
-      'Content-Security-Policy': "frame-ancestors 'self' https://piglatintranslator.pro"
+      'X-Frame-Options': 'ALLOW-FROM https://piglatintranslator.pro'
+      // 'Content-Security-Policy': "frame-ancestors 'self' https://piglatintranslator.pro"
     }
   }
 });
