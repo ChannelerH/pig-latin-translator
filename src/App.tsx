@@ -63,15 +63,6 @@ function App() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  useEffect(() => {
-    // 动态添加广告脚本
-    const script = document.createElement('script');
-    script.src = '//pl25904572.effectiveratecpm.com/f3ace42f827e8f1cd847f080aabdff1d/invoke.js';
-    script.async = true;
-    script.setAttribute('data-cfasync', 'false');
-    document.body.appendChild(script);
-  }, []);
-
   const handleTranslate = () => {
     if (mode === 'toPigLatin') {
       setOutputText(translateToPigLatin(inputText));
@@ -318,10 +309,6 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <div id="container-f3ace42f827e8f1cd847f080aabdff1d"></div>
         </div>
 
         <footer className="mt-12 text-center text-gray-600">
