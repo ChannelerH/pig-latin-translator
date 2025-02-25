@@ -315,22 +315,26 @@ function App() {
           <p className="mb-4">
             Discover the power of our advanced Pig Latin Translator – your ultimate companion for mastering this fascinating linguistic tradition. Whether for education, entertainment, or language exploration, our Pig Latin Translator provides the perfect solution for all your translation needs. Experience the magic of language transformation with our innovative Pig Latin Translator today.
           </p>
-          <a
-            href="https://github.com/ChannelerH/pig-latin-translator.git"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors"
-          >
-            <Github size={20} />
-            View on GitHub
-          </a>
-          <p>.</p>
-          <a href="https://luminabrush.site/"
-           target="_blank"
-           rel="noopener noreferrer"
-           className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors">
-            luminabrush
+          <div className="flex justify-center gap-6 mt-4">
+            <a
+              href="https://github.com/ChannelerH/pig-latin-translator.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors"
+            >
+              <Github size={20} />
+              View on GitHub
             </a>
+
+            <a
+              href="https://luminabrush.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors"
+            >
+              luminabrush
+            </a>
+          </div>
         </footer>
       </div>
     </div>
