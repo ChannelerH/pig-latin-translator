@@ -324,7 +324,12 @@ function App() {
             <Github size={20} />
             View on GitHub
           </a>
-          <a href="https://luminabrush.site/">luminabrush</a>
+          <a href="https://luminabrush.site/"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors">
+            luminabrush
+            </a>
         </footer>
       </div>
     </div>
