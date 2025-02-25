@@ -324,7 +324,7 @@ function App() {
             <Github size={20} />
             View on GitHub
           </a>
-          <span>.<span/>
+          <p>.</p>
           <a href="https://luminabrush.site/"
            target="_blank"
            rel="noopener noreferrer"
