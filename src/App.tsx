@@ -324,6 +324,7 @@ function App() {
             <Github size={20} />
             View on GitHub
           </a>
+          <a href="https://luminabrush.site/">luminabrush</a>
         </footer>
       </div>
     </div>
