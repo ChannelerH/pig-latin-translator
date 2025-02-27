@@ -329,7 +329,7 @@ function App() {
             <a
               href="https://luminabrush.site/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="dofollow"
               className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors"
             >
               luminabrush
