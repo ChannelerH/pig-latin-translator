@@ -334,6 +334,14 @@ function App() {
             >
               luminabrush
             </a>
+            <a
+              href="https://wan21.run/"
+              target="_blank"
+              rel="dofollow"
+              className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors"
+            >
+              wan21
+            </a>
           </div>
         </footer>
       </div>
