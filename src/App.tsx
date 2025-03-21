@@ -342,6 +342,14 @@ function App() {
             >
               wan21
             </a>
+            <a
+              href="https://picapix.org/"
+              target="_blank"
+              rel="dofollow"
+              className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors"
+            >
+              picapix
+            </a>
           </div>
         </footer>
       </div>
